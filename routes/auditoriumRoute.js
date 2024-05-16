@@ -7,8 +7,8 @@ const Auditorium = require('../models/auditorium')
 router.get("/getallauditoriums", async(req, res) => {
 
     try{
-        db.getCollection('auditorium').find({});
-       /* const auditorium = await Auditorium.find({}) */
+        
+       const auditorium = await Auditorium.find({})
         res.send(auditorium)
     }
     catch (error){
