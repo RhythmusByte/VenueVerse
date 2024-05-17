@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <form class="form" id="login-form">
+    <p class="form-title">Log In</p>
+    <p id="login-error" class="error-message"></p>
+    <div class="input-container">
+      <input type="email" placeholder="Email" name="email" required>
+      <span></span>
+    </div>
+    <div class="input-container">
+      <input type="password" placeholder="Password" name="password" required>
+    </div>
+    <button type="submit" class="submit">Log in</button>
+    <p class="signup-link">No account? <a href="signup.html">Sign up</a></p>
+  </form>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      const loginErrorElement = document.getElementById('login-error');
+      if (response.status !== 200) {
+        loginErrorElement.textContent = result.error;
+      } else {
+        loginErrorElement.textContent = '';
+        window.location.href = '/mainpage/index.html';
+      }
+    });
+  </script>
+
+</body>
+</html>

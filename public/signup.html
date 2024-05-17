@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <form class="form" id="signup-form">
+    <p class="form-title">Create an Account</p>
+    <p id="signup-error" class="error-message"></p>
+    <div class="input-container">
+      <input type="text" placeholder="Your Name" name="name" required>
+      <span></span>
+    </div>
+    <div class="input-container">
+      <input type="email" placeholder="Enter email" name="email" required>
+      <span id="email-error" class="error-message"></span>
+    </div>
+    <div class="input-container">
+      <input type="password" placeholder="Enter password" name="password" required>
+    </div>
+    <button type="submit" class="submit">Register</button>
+    <p class="signup-link">Already have an account? <a href="index.html">Login</a></p>
+  </form>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch('/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      const signupErrorElement = document.getElementById('signup-error');
+      if (response.status !== 201) {
+        signupErrorElement.textContent = result.error;
+      } else {
+        signupErrorElement.textContent = '';
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+
+</body>
+</html>
