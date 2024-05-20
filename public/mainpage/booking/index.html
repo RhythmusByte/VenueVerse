@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="formContainer">
+      <h2>Booking Form</h2>
+      <form id="bookingForm">
+        <label for="name">Name: </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="John Doe"
+        />
+        <br />
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="example@example.com"
+        />
+        <br />
+        <label for="mobile">Mobile: </label>
+        <input
+          type="number"
+          id="mobile"
+          name="mobile"
+          required
+          autocomplete="off"
+          maxlength="10"
+          minlength="10"
+          placeholder="9876543210"
+        />
+        <br />
+        <label for="fromDate">From: </label>
+        <input type="date" id="fromDate" name="fromDate" required />
+        <br />
+        <label for="toDate">To: </label>
+        <input type="date" id="toDate" name="toDate" required />
+        <br />
+        <div id="error-message" style="color: red; display: none"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
