@@ -1,4 +1,5 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,12 +14,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
+  background-color: 
+  hsl(0, 0%, 0%);
   height: 80px;
-  width: 100;
-  padding: 0 20px;
-  box-shadow: 5px 5px 5px #363635c6;
-  position: relative;
+  width: 100%;
+  padding:0 20px;
+  box-shadow: 5px 5px 5px #363635c6 ;
 }
 
 .logoContainer {
@@ -37,22 +38,119 @@ header h3 a {
   text-decoration: none;
 }
 
-.logoContainer img {
+.logoContainer img{
   height: 80px;
   width: 80px;
   display: flex;
   justify-content: flex-start;
 }
 
-.logoContainer img:hover {
+.logoContainer img:hover{
   cursor: pointer;
 }
 
-.logoContainer h1 {
+
+.logoContainer h1{
   padding: 15px;
   color: white;
 }
+
+
+.logout {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000000;
+  transition: all 0.2s ease;
+}
+
+.logout:active {
+  transform: scale(0.96);
+}
+
+.logout:before,
+.logout:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.logout:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #fffeff 20%, transparent 30%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ffffff 15%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.logout:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ffffff 15%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%),
+    radial-gradient(circle, #ffffff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
 .home {
+
   height: 600px;
   width: 100%;
   background-repeat: no-repeat;
@@ -61,40 +159,41 @@ header h3 a {
   background-size: cover;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.903);
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.903) ;
 }
 
 /*quote */
 .qoute {
   color: rgb(237, 237, 237);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  font-style: italic;
-  font-weight: bolder;
-  font-size: 3em;
-  text-shadow: 2px 2px 5px hsl(0, 0%, 0%);
+  display: flex ;
+ justify-content: center;
+ align-items: center;
+ height: 80vh;
+ font-style: italic;
+ font-weight: bolder;
+ font-size: 3em;
+ text-shadow: 2px 2px 5px hsl(0, 0%, 0%);
 }
 
 .home {
-  background-image: url("img/bg_img.jpg");
-  background-color: hsla(0, 0%, 0%, 0.46);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-repeat: no-repeat;
-  height: 100vh;
+background-image: url("/img/bg_img.jpg");
+background-color: hsla(0, 0%, 0%, 0.46);
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+background-repeat: no-repeat;
+height: 100vh;
+
 }
 /* end quote */
 .text p {
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bolder;
-  padding-top: 100px;
-  font-size: 3em;
-  font-family: "Poetsen One", sans-serif;
+color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bolder;
+padding-top: 100px;
+font-size: 4em;
+font-family: "Joan", serif;
 }
 
 /* Beginning of News Tiles */
@@ -179,8 +278,9 @@ footer {
   transition: 0.5s;
 }
 
+
 .footerCredits {
-  background-color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 7%);
   padding: 20px;
   text-align: center;
 }
@@ -205,5 +305,7 @@ footer {
   cursor: pointer;
   color: hsl(0, 0%, 100%);
 }
+
+
 
 /* Ending of Footer */
