@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const path = require("path");
 const dotenv = require("dotenv");
+const session = require("express-session");
 
 dotenv.config();
 
@@ -14,6 +15,13 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(
+  session({
+    secret: "your-secret-key",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, "public")));
@@ -32,6 +40,14 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model("User", userSchema);
+
+// Middleware to check session
+const isAuthenticated = (req, res, next) => {
+  if (req.session && req.session.user) {
+    return next();
+  }
+  res.redirect("/");
+};
 
 // Routes
 app.post("/register", async (req, res) => {
@@ -67,10 +83,23 @@ app.post("/login", async (req, res) => {
       return res.status(400).json({ error: "Invalid email or password" });
     }
 
+    // Set session data upon successful login
+    req.session.user = { email: email };
+
     res.status(200).json({ message: "Login successful" });
   } catch (err) {
     res.status(500).json({ error: "Internal server error" });
   }
+});
+
+app.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      res.status(500).json({ error: "Unable to logout" });
+    } else {
+      res.redirect("/");
+    }
+  });
 });
 
 // Route to serve the login page
@@ -84,7 +113,7 @@ app.get("/signup.html", (req, res) => {
 });
 
 // Route to serve the next page after login
-app.get("/nextpage/index.html", (req, res) => {
+app.get("/mainpage/index.html", isAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, "public", "mainpage", "index.html"));
 });
 

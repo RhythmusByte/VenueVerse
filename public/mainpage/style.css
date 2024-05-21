@@ -1,24 +1,40 @@
-@import url("https://fonts.googleapis.com/css2?family=Joan&display=swap");
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Defining Colors */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #0d1b2a;
+  --gray: #1b263b;
+  --light: #415a77;
+  --alice: #f0f8ff;
+}
+
+/* Webpage */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: hsla(27, 28%, 51%, 0.782);
-  font-family: "Josefin";
-}
-/* navbar */
 
+body {
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  background-color: var(--dark);
+  color: var(--alice);
+}
+
+/* Beginning of Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(0, 0%, 0%);
+  background-color: var(--black);
   height: 80px;
   width: 100%;
   padding: 0 20px;
-  box-shadow: 5px 5px 5px #363635c6;
+  box-shadow: 5px 5px 5px var(--gray);
 }
 
 .logoContainer {
@@ -33,13 +49,13 @@ header h3 {
 }
 
 header h3 a {
-  color: #fff;
+  color: var(--alice);
   text-decoration: none;
 }
 
 .logoContainer img {
-  height: 80px;
-  width: 80px;
+  height: 85px;
+  width: 85px;
   display: flex;
   justify-content: flex-start;
 }
@@ -50,10 +66,9 @@ header h3 a {
 
 .logoContainer h1 {
   padding: 15px;
-  color: white;
+  color: var(--alice);
 }
 
-/* Log Out Btn */
 .Btn {
   display: flex;
   align-items: center;
@@ -70,7 +85,6 @@ header h3 a {
   background-color: rgb(0, 0, 0);
 }
 
-/* plus sign */
 .sign {
   width: 100%;
   transition-duration: 0.3s;
@@ -86,8 +100,8 @@ header h3 a {
 .sign svg path {
   fill: white;
 }
-/* text */
-.text {
+
+.Btntext {
   position: absolute;
   right: 0%;
   width: 0%;
@@ -97,7 +111,7 @@ header h3 a {
   font-weight: 600;
   transition-duration: 0.3s;
 }
-/* hover effect on button width */
+
 .Btn:hover {
   width: 125px;
   border-radius: 40px;
@@ -109,33 +123,35 @@ header h3 a {
   transition-duration: 0.3s;
   padding-left: 20px;
 }
-/* hover effect button's text */
-.Btn:hover .text {
+
+.Btn:hover .Btntext {
   opacity: 1;
   width: 70%;
   transition-duration: 0.3s;
   padding-right: 10px;
 }
-/* button click effect*/
+
 .Btn:active {
   transform: translate(2px, 2px);
 }
-
+/* Ending of Header */
+/* Beginning of Hero Section */
 .home {
-  height: 600px;
+  height: 100vh;
   width: 100%;
+  background-image: url("img/heroBG.jpg");
+  background-color: #0d1b2a;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
-  background-size: cover;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.903);
+  box-shadow: 2px 2px 5px var(--gray);
 }
 
-/*quote */
 .qoute {
-  color: rgb(237, 237, 237);
+  color: var(--alice);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,30 +159,21 @@ header h3 a {
   font-style: italic;
   font-weight: bolder;
   font-size: 3em;
-  text-shadow: 2px 2px 5px hsl(0, 0%, 0%);
+  text-shadow: 2px 2px 5px var(--black);
 }
-
-.home {
-  background-image: url("img/bg_img.jpg");
-  background-color: hsla(0, 0%, 0%, 0.46);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-/* end quote */
+/* Ending of Hero Section */
+/* Beginning of Tiles */
 .text p {
-  color: black;
+  color: var(--alice);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bolder;
   padding-top: 100px;
-  font-size: 4em;
-  font-family: "Joan", serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
 }
-
-/* Beginning of News Tiles */
 
 .newsContainer {
   display: flex;
@@ -177,46 +184,55 @@ header h3 a {
 
 .imageContainer {
   width: 425px;
-  background-color: rgba(255, 255, 255, 0.284);
+  background-color: var(--gray);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 2px 4px;
+  box-shadow: 0px 2px 4px var(--black);
   margin: 25px;
 }
+
 .imageContainer img {
   width: 100%;
   height: 70%;
 }
+
 .content {
   padding: 20px;
 }
+
 .content h2 {
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-weight: bolder;
-  text-shadow: 1px 1px 3px hsl(0, 0%, 0%);
-  color: hsl(37, 98%, 53%);
+  text-shadow: 1px 1px 3px var(--black);
+  color: var(--alice);
 }
+
 .content p {
   text-align: center;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin: 5px;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  color: hsla(0, 0%, 100%, 0.7);
 }
+
 .imageContainer:hover {
   transform: scale(1.02);
-  box-shadow: 2px 3px 5px hsl(0, 0%, 16%);
+  box-shadow: 2px 3px 5px var(--black);
   cursor: pointer;
+  transition: 0.2s;
 }
-
-/* End of News Tiles */
-
-/* Starting of Footer */
-
+/* Ending of Tiles */
+/* Beginner of Footer */
 footer {
-  background-color: hsl(0, 0%, 7%);
+  background-color: var(--dark);
 }
 
 .footerContainer {
   width: 100%;
-  padding: 70px 30px 20px;
+  padding: 20px 30px 20px;
 }
 
 .socialIcons {
@@ -227,19 +243,19 @@ footer {
 .socialIcons a {
   text-decoration: none;
   padding: 10px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--alice);
   border-radius: 50%;
   margin: 10px;
 }
 
 .socialIcons a i {
-  font-size: 2em;
+  font-size: 1.5em;
   color: hsl(0, 0%, 0%);
   opacity: 0.9;
 }
 
 .socialIcons a:hover {
-  background-color: hsl(0, 0%, 7%);
+  background-color: var(--dark);
   transition: 0.5s;
 }
 
@@ -249,9 +265,10 @@ footer {
 }
 
 .footerCredits {
-  background-color: hsl(0, 0%, 7%);
-  padding: 20px;
+  background-color: var(--dark);
+  margin: 20px;
   text-align: center;
+  font-size: 0.85rem;
 }
 
 .footerCredits p {
@@ -274,5 +291,29 @@ footer {
   cursor: pointer;
   color: hsl(0, 0%, 100%);
 }
+/* Ending of Footer */
 
-/* Ending of Footer */
+/* Media Queries */
+@media (max-width: 1200px) {
+  .home h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .home h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home h3 {
+    font-size: 1.5rem;
+  }
+}
