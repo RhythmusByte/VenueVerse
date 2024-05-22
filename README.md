@@ -18,3 +18,7 @@ VenueVerse is open-source and created by beginners with limited knowledge in pro
 ## 📜 License
 
 This project is licensed under the BSD 3-Clause License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+⭐ Give a star to the repo and support me.
