@@ -13,7 +13,7 @@ VenueVerse is a simple and basic auditorium booking website created using Node.j
 
 ## 🤝 Contributing
 
-VenueVerse is open-source and created by beginners with limited knowledge in programming. Therefore, there may be bugs and vulnerabilities. Contributors are welcomed and encouraged to collaborate on the project.
+VenueVerse is open-source and created by beginners with limited knowledge in programming. Therefore, there may be bugs and vulnerabilities. Contributors are welcomed and encouraged to collaborate on the project. Read this file to understand [how you can contribute to this project](https://github.com/RhythmusByte/VenueVerse/wiki/Contributing-to-VenueVerse).
 
 ## 📜 License
 
@@ -21,4 +21,4 @@ This project is licensed under the BSD 3-Clause License. See the [LICENSE](LICEN
 
 ---
 
-⭐ Give a star to the repo and support me.
+⭐ Give a star to the repo and support us.
