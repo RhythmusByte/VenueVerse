@@ -28,7 +28,7 @@ document
     const bookingDetails = { name, email, mobile, fromDate, toDate };
     console.log("Booking details:", bookingDetails); // Debug statement
 
-    fetch("http://localhost:2808/api/bookings", {
+    fetch("http://localhost:3000/api/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
