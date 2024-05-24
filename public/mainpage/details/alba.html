@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alba Auditorium</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <script
+     src="https://kit.fontawesome.com/fcf5d0bef4.js"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+    <!-- Beginning of Navbar -->
+    <header>
+        <a href="../index.html">
+            <img src="../img/logo.png" alt="Logo">
+        </a>
+    </header>
+    <!-- End of Navbar -->
+
+    <main>
+        <h1 class="title">
+            Alba Arcade Auditorium
+        </h1>
+        
+        <!-- Beginning of Slider -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="../img/alba-2.jpg">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="../img/alba-1.jpg">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="../img/alba-2.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="../img/alba-1.jpg">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div><br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <!-- End of Slider -->
+
+        <!-- Beginning of Contents -->
+        <div class="contentContainer">
+            <div class="desc">
+                <h3>
+                    Description
+                 </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officiis dicta rem alias necessitatibus repellat fugiat aperiam quidem. Officia inventore nulla illum deleniti veniam? Officiis hic aperiam ad modi sunt!
+                </p>
+            </div>
+            <div class="locationContainer">
+                <h3>
+                    Location
+                </h3>
+                <p>
+                    Bus Stop, Gulf Bazar, Parambil Bazar-Kannadikkal Rd, Kozhikode, Kerala 673012
+                </p>
+                <div class="location">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.3464040643285!2d75.81870257504967!3d11.309371588873645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65ddcf873390d%3A0x1c647772bd0380ea!2sALBA%20ARCADE%20AUDITORIUM!5e0!3m2!1sen!2sin!4v1716186960016!5m2!1sen!2sin" 
+                        width="400" height="300" style="border:0;" allowfullscreen loading="lazy"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contact">
+                <h3>
+                    Contact
+                </h3>
+                <p>
+                    <span class="sub">Email: </span><a href="mailto:alba@example.com">alba@example.com</a>
+                    <br>
+                    <span class="sub">Mobile: </span>+91 98765 43210
+                </p>
+            </div>
+        </div>
+        <!-- End of Contents -->
+
+        <!-- Starting of Footer -->
+
+        <footer>
+            <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="#"><i id="icon" class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-instagram"></a></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footerCredits">
+                <p>
+                Created by <a href="#" class="credits">Afna Sheri A</a>, <a href="#" class="credits">Akhil Mahesh</a> & <a href="#" class="credits">Sanooj K</a>
+                </p>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
