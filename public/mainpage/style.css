@@ -154,7 +154,7 @@ header {
 }
 /* Ending of Hero Section */
 /* Beginning of Tiles */
-.text p {
+.tilesTitle p {
   color: var(--alice);
   display: flex;
   justify-content: center;

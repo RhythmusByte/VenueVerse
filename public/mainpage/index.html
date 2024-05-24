@@ -5,18 +5,6 @@
     <meta name="author" content="RhythmusByte">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VenueVerse</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
-    />
-     
-     <link rel="stylesheet" href="style.css" >
-     
-     <script
-     src="https://kit.fontawesome.com/fcf5d0bef4.js"
-     crossorigin="anonymous"
-   ></script>
-       <!-- Favicon -->
        <link
        rel="apple-touch-icon"
        sizes="180x180"
@@ -35,104 +23,114 @@
        href="details/favicon/favicon-16x16.png"
      />
      <link rel="manifest" href="details/favicon/site.webmanifest" />
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />      
+    <script
+    src="https://kit.fontawesome.com/fcf5d0bef4.js"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" >
 </head>
 <body>
-  <!-- navbar -->
+    <!-- Beginning of Navbar -->
     <header>
       <nav class="navContainer">
-        <img src="img/logo.png">
-  <!--end navbar-->      
-        <!-- log-in page link -->
-        
+        <img src="img/logo.png">   
         <button onclick="logout()" class="Btn">
-  
           <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
-          
           <div class="btntext">Logout</div>
         </button>
-
       </nav>
     </header>
-    <!-- Starting of heroSection-->
+    <!--End of Navbar -->  
 
+    <!-- Beginning of heroSection-->
     <div class="heroSection" id="heroSection">
         <h3 class="qoute">Your Event, Our Network Of Auditoriums</h3>
     </div>
-    
     <!-- End of heroSection -->
  
-    <div class="text">
+    <div class="tilesTitle">
     <p>List of Auditoriums</p>
-   </div>
-    <!-- auditorium details -->
+    </div>
+
+    <!-- Beginning of Tiles -->
      <div class="tilesContainer">
+
+      <!-- Tile 1 -->
       <div class="tile">
-       <img src="img/alba.jpg" alt="auditorium1"> 
+        <img src="img/alba.jpg" alt="auditorium1"> 
         <div class="content">
           <h2>ALBA ARCADE AUDITORIUM</h2>
           <p>Kozhikode</p>
         </div>
       </div>
 
-     <div class="tile">
-      <img src="img/grand.jpeg">
-      <div class="content">
-        <h2>GRAND AUDITORIUM</h2>
-        <P>Kozhikode</P>
+      <!-- Tile 2 -->
+      <div class="tile">
+        <img src="img/grand.jpeg">
+        <div class="content">
+          <h2>GRAND AUDITORIUM</h2>
+          <P>Kozhikode</P>
+        </div>
       </div>
-     </div>
      
-     <div class="tile">
-      <img src="img/kaus-2.jpg">
-      <div class="content">
-        <h2>KAUSTHUBHAM AUDITORIUM</h2>
-        <P>Thiruvananthapuram</P>
+      <!-- Tile 3 -->
+      <div class="tile">
+        <img src="img/kaus-2.jpg">
+        <div class="content">
+          <h2>KAUSTHUBHAM AUDITORIUM</h2>
+          <P>Thiruvananthapuram</P>
+        </div>
       </div>
-     </div>
 
-     <div class="tile">
-      <img src="img/new.jpg">
-      <div class="content">
-        <h2>NEW CASTLE AUDITORIUM</h2>
-        <P>Malappuram</P>
-      </div>
-     </div>
+      <!-- Tile 4 -->
+      <div class="tile">
+        <img src="img/new.jpg">
+        <div class="content">
+          <h2>NEW CASTLE AUDITORIUM</h2>
+          <P>Malappuram</P>
+        </div>
+       </div>
 
-     <div class="tile">
-      <img src="img/sion.jpg">
-      <div class="content">
-        <h2>SION AUDITORIUM</h2>
-        <P>Kochi</P>
+      <!-- Tile 5 -->
+      <div class="tile">
+        <img src="img/sion.jpg">
+        <div class="content">
+          <h2>SION AUDITORIUM</h2>
+          <P>Kochi</P>
+        </div>
       </div>
-     </div>
      
-     <div class="tile">
-      <img src="img/st.jpg">
-      <div class="content">
-        <h2>ST IGNATIUS CONVENTION CENTER</h2>
-        <P>Kochi</P>
+      <!-- Tile 6 -->
+      <div class="tile">
+        <img src="img/st.jpg">
+        <div class="content">
+          <h2>ST IGNATIUS CONVENTION CENTER</h2>
+          <P>Kochi</P>
+        </div>
       </div>
-     </div>
-     </div>
- <!-- end details-->
-      <!-- Starting of Footer -->
-
-      <footer>
-        <div class="footerContainer">
-          <div class="socialIcons">
-            <a href="#"><i id="icon" class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i id="icon" class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i id="icon" class="fa-brands fa-instagram"></a></i></a>
-            <a href="#"><i id="icon" class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i id="icon" class="fa-brands fa-linkedin"></i></a>
-          </div>
-          <div class="footerCredits">
-            <p>
-              Designed by <a href="#" class="credits">Afna Sheri A</a>, <a href="#" class="credits">Akhil Mahesh</a> & <a href="#" class="credits">Sanooj K</a>
-            </p>
-          </div>
-        </footer>
-    <!-- Ending of Footer -->
+    </div>
+    
+    <!-- End of Tiles -->
+    <!-- Starting of Footer -->
+    <footer>
+      <div class="footerContainer">
+        <div class="socialIcons">
+          <a href="#"><i id="icon" class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i id="icon" class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i id="icon" class="fa-brands fa-instagram"></a></i></a>
+          <a href="#"><i id="icon" class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i id="icon" class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footerCredits">
+          <p>
+            Designed by <a href="#" class="credits">Afna Sheri A</a>, <a href="#" class="credits">Akhil Mahesh</a> & <a href="#" class="credits">Sanooj K</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
  
     <script  src="main.js"> </script>
 </body>
