@@ -1,12 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Booking = require('./models/Booking'); // Ensure the correct path
+const Booking = require('./models/Booking');
 const path = require('path');
+require('dotenv').config(); 
 
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://venueverse:VenueVerse@venue-verse.lu2nlwz.mongodb.net/bookings', {
+mongoose.connect(process.env.MONGODB_ADMIN, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -31,7 +32,7 @@ app.get('/api/bookings', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 2808;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
