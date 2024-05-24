@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(
   session({
-    secret: "your-secret-key",
+    secret: "aydyrtcrkvtbSFT46sFSterutee564POn",
     resave: false,
     saveUninitialized: false,
   })
