@@ -3,96 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RhythmusByte">
     <title>Grand Auditorium</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-     rel="stylesheet">
-     <script
+    <script
      src="https://kit.fontawesome.com/fcf5d0bef4.js"
-     crossorigin="anonymous"
-   ></script>
-    <link rel="stylesheet" href="style.css" > 
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" >
 </head>
 <body>
-
-
-    <!-- navbar-->
+    <!-- Beginning of Navbar -->
     <header>
-        <nav class="logoContainer">
-          <a href="#"><img src="/img/logo.png"></a>
-        </nav>
+        <a href="../index.html">
+            <img src="../img/logo.png" alt="Logo">
+        </a>
     </header>
-    <!--end navbar--> 
+    <!-- End of Navbar -->
 
-     <!--heading-->
-      <h1 class="heading">GRAND AUDITORIUM</h1>
-     <!--end heading-->
-
-    <!-- sliding-->
     <main>
-        <img src="/img/grand-1.jpg" alt="" class="slide">
-        <img src="/img/grand-2.jpg" alt="" class="slide">
-        <img src="/img/grand.jpeg" alt="" class="slide">
+        <h1 class="title">
+            Grand Auditorium
+        </h1>
+        
+        <!-- Beginning of Slider -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="../img/grand-1.jpg">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="../img/grand.jpeg">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="../img/grand-1.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="../img/grand.jpeg">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div><br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <!-- End of Slider -->
+
+        <!-- Beginning of Contents -->
+        <div class="contentContainer">
+            <div class="desc">
+                <h3>
+                    Description
+                 </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus officiis dicta rem alias necessitatibus repellat fugiat aperiam quidem. Officia inventore nulla illum deleniti veniam? Officiis hic aperiam ad modi sunt!
+                </p>
+            </div>
+            <div class="locationContainer">
+                <h3>
+                    Location
+                </h3>
+                <p>
+                    Francis Rd, Thekepuram, Kuttichira, Kozhikode, Kerala 673002
+                </p>
+                <div class="location">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.2737205249496!2d75.77894537504866!3d11.241263588937185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65913635f7b79%3A0x8b638ac22ea4c400!2sGrand%20Auditorium!5e0!3m2!1sen!2sin!4v1716188504753!5m2!1sen!2sin" 
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contact">
+                <h3>
+                    Contact
+                </h3>
+                <p>
+                    <span class="sub">Email: </span><a href="mailto:grand@example.com">grand@example.com</a>
+                    <br>
+                    <span class="sub">Mobile: </span>+91 98765 43210
+                </p>
+            </div>
+        </div>
+        <!-- End of Contents -->
+
+        <!-- Starting of Footer -->
+
+        <footer>
+            <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="#"><i id="icon" class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-instagram"></a></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footerCredits">
+                <p>
+                Created by <a href="#" class="credits">Afna Sheri A</a>, <a href="#" class="credits">Akhil Mahesh</a> & <a href="#" class="credits">Sanooj K</a>
+                </p>
+            </div>
+        </footer>
+        <!-- End of Footer -->
     </main>
 
-    <div class="btnContainer">
-        <a href="#" class="btn" onclick="goPrevious()"> PREVIOUS </a>
-        <a href="#" class="btn" onclick="goNext()"> NEXT </a>
-    </div>
-    <!-- end sliding-->
-
-
-
-    <!--contents -->
-    <div class="wrapper">
-    <div class="content">
-     <ul>
-            <li><h3>Description</h3></li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-             Blanditiis dolorum, officiis odio commodi accusamus non, minima at fuga 
-             soluta nam dolor possimus,
-            rerum ullam inventore mollitia culpa id ea repellat.
-            </li>
-            <li><h3>Place :</h3>Francis Rd, Thekepuram, Kuttichira, Kozhikode, Kerala 673002</li>
-            <li><h3>Phone no :</h3>098956 65555</li>
-  </ul>
-    </div>
-      <div class="location">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.2737205249496!2d75.77894537504866!3d11.241263588937185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65913635f7b79%3A0x8b638ac22ea4c400!2sGrand%20Auditorium!5e0!3m2!1sen!2sin!4v1716188504753!5m2!1sen!2sin" 
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-
-    <div class="booknow">
-      <button>Book Now!</button>
-    </div>
-    <!--end contents-->
-
-    <!-- Starting of Footer -->
-
-    <footer>
-      <div class="footerContainer">
-        <div class="socialIcons">
-          <a href="#"><i id="icon" class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i id="icon" class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i id="icon" class="fa-brands fa-instagram"></a></i></a>
-          <a href="#"><i id="icon" class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i id="icon" class="fa-brands fa-linkedin"></i></a>
-        </div>
-        <div class="footerCredits">
-          <p>
-            Designed by <a href="#" class="credits">Afna Sheri A</a>, <a href="#" class="credits">Akhil Mahesh</a> & <a href="#" class="credits">Sanooj K</a>
-          </p>
-        </div>
-      </footer>
-  <!-- Ending of Footer -->
-
-
-  <script  src="index.js"> </script>
+    <script src="main.js"></script>
 </body>
 </html>
