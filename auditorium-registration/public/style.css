@@ -1,0 +1,130 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Defining Colors */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #0d1b2a;
+  --gray: #1b263b;
+  --light: #415a77;
+  --alice: #f0f8ff;
+  --transparent: #000000cc;
+  --title: #B0BEC5;
+  --silver: #c9c9c9;
+}
+
+/* Webpage */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans" ,"Merriweather", Arial, Helvetica, sans-serif;
+  background-color: var(--dark);
+  color: var(--alice);
+}
+
+/* Beginning of Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+    box-shadow: 0 2px 5px var(--gray);
+}
+
+header img {
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+    width: 100px;
+}
+
+header img:hover {
+    cursor: pointer;
+}
+/* End of Header */
+
+/* Beginning of Form Container */
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: max-content;
+    margin: 40px auto;
+    padding: 8px;
+}
+
+.formContainer h1 {
+  font-size: 1.75rem;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+/* Beginning of Form */
+
+form input {
+  margin: 8px;
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--black);
+  width: 250px;
+  height: 30px;
+  background-color: var(--title);
+  box-shadow: 0 2px 3px var(--light);
+  border: none;
+}
+
+form input::placeholder {
+  color: #00000095;
+  font-weight: bold;
+}
+
+form button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--silver);
+  color: var(--black);
+  font-weight: bold;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: var(--title);
+}
+
+/* End of Form */
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  header {
+    height: 60px;
+  }
+
+  header img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .formContainer h1 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+}
