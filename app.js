@@ -114,7 +114,9 @@ app.post("/login", async (req, res) => {
       return res.status(400).json({ error: "Invalid email or password" });
     }
 
+    // Set session data upon successful login
     req.session.user = { email: email };
+
     res.status(200).json({ message: "Login successful" });
   } catch (err) {
     console.error("Error during login:", err);
@@ -163,7 +165,7 @@ app.post("/api/bookings", async (req, res) => {
   }
 });
 
-// Catch-all route for handling non-matching routes
+// Handle any other routes with index.html
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
