@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(
   session({
-    secret: "aydyrtcrkvtbSFT46sFSterutee564POn",
+    secret: process.env.SESSION_SECRET || "defaultsecret",
     resave: false,
     saveUninitialized: false,
   })
@@ -31,12 +31,24 @@ app.use(express.static(path.join(__dirname, "public")));
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.log("Connected to MongoDB for login");
+}).catch(err => {
+  console.error("Error connecting to MongoDB for login:", err);
 });
 
 // MongoDB connection for bookings
 const bookingConnection = mongoose.createConnection(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+});
+
+bookingConnection.on('connected', () => {
+  console.log("Connected to MongoDB for bookings");
+});
+
+bookingConnection.on('error', (err) => {
+  console.error("Error connecting to MongoDB for bookings:", err);
 });
 
 // Define User Schema for login
@@ -83,6 +95,7 @@ app.post("/register", async (req, res) => {
     await newUser.save();
     res.status(201).json({ message: "User registered successfully" });
   } catch (err) {
+    console.error("Error registering user:", err); // Added error logging
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -106,6 +119,7 @@ app.post("/login", async (req, res) => {
 
     res.status(200).json({ message: "Login successful" });
   } catch (err) {
+    console.error("Error during login:", err); // Added error logging
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -113,6 +127,7 @@ app.post("/login", async (req, res) => {
 app.get("/logout", (req, res) => {
   req.session.destroy((err) => {
     if (err) {
+      console.error("Error during logout:", err); // Added error logging
       res.status(500).json({ error: "Unable to logout" });
     } else {
       res.redirect("/");
@@ -145,7 +160,7 @@ app.post("/api/bookings", async (req, res) => {
     console.log("Booking saved:", newBooking); // Debug statement
     res.json({ message: "Booking successful!" });
   } catch (err) {
-    console.log("Error saving booking:", err); // Debug statement
+    console.error("Error saving booking:", err); // Added error logging
     res.status(500).json({ message: "Server error" });
   }
 });
