@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RhythmusByte">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#">
+            <img src="logo.png" alt="Logo">
+        </a>
+    </header>
+
+    <main>
+        <div class="formContainer">
+            <h1>Auditorium Registration Form</h1>
+            <form action="/register" method="POST">
+                <input type="text" id="ownerName" name="ownerName" placeholder="Owner's Name" required><br>
+                <input type="text" id="auditoriumName" name="auditoriumName" placeholder="Auditorium Name" required><br>
+                <input type="text" id="address" name="address" placeholder="Address" required><br>
+                <input type="text" id="location" name="location" placeholder="Location (Ex: Kochi)" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required><br>
+                <input type="url" id="image1" name="image1" placeholder="Image URL 1" required><br>
+                <input type="url" id="image2" name="image2" placeholder="Image URL 2" required><br>
+                <input type="url" id="image3" name="image3" placeholder="Image URL 3"><br>
+                <input type="text" id="description" name="description" placeholder="Description" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
