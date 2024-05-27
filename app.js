@@ -95,7 +95,7 @@ app.post("/register", async (req, res) => {
     await newUser.save();
     res.status(201).json({ message: "User registered successfully" });
   } catch (err) {
-    console.error("Error registering user:", err); // Added error logging
+    console.error("Error registering user:", err);
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -114,12 +114,10 @@ app.post("/login", async (req, res) => {
       return res.status(400).json({ error: "Invalid email or password" });
     }
 
-    // Set session data upon successful login
     req.session.user = { email: email };
-
     res.status(200).json({ message: "Login successful" });
   } catch (err) {
-    console.error("Error during login:", err); // Added error logging
+    console.error("Error during login:", err);
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -127,7 +125,7 @@ app.post("/login", async (req, res) => {
 app.get("/logout", (req, res) => {
   req.session.destroy((err) => {
     if (err) {
-      console.error("Error during logout:", err); // Added error logging
+      console.error("Error during logout:", err);
       res.status(500).json({ error: "Unable to logout" });
     } else {
       res.redirect("/");
@@ -157,15 +155,15 @@ app.post("/api/bookings", async (req, res) => {
 
   try {
     await newBooking.save();
-    console.log("Booking saved:", newBooking); // Debug statement
+    console.log("Booking saved:", newBooking);
     res.json({ message: "Booking successful!" });
   } catch (err) {
-    console.error("Error saving booking:", err); // Added error logging
+    console.error("Error saving booking:", err);
     res.status(500).json({ message: "Server error" });
   }
 });
 
-// Handle any other routes with index.html
+// Catch-all route for handling non-matching routes
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
