@@ -1,0 +1,238 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Defining Colors */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --dark: #0d1b2a;
+    --gray: #1b263b;
+    --light: #415a77;
+    --alice: #f0f8ff;
+    --transparent: #000000cc;
+    --title: #B0BEC5;
+    --silver: #c9c9c9;
+}
+
+/* Webpage */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Merriweather", Arial, Helvetica, sans-serif;
+    background-color: var(--dark);
+    color: var(--alice);
+}
+
+/* Beginning of Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+    box-shadow: 0 2px 5px var(--gray);
+}
+
+header img {
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+    width: 100px;
+}
+
+header img:hover {
+    cursor: pointer;
+}
+/* End of Header */
+
+/* Title */
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 50px;
+    font-size: 3rem;
+    color: var(--alice);
+    text-transform: uppercase;
+}
+
+/* Beginning of Slider */
+
+.slideshow-container {
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 800px;
+}
+
+.prev, .next {
+    display: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--transparent);
+}
+
+.dot {
+    display: none;
+}
+
+.active, .dot:hover {
+    background-color: var(--title);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* End of Slider */
+
+/* Beginning of Contents */
+.contentContainer {
+    margin: 0 auto; 
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 100px; /* Prevent content from being hidden under the footer */
+}
+
+.desc, 
+.locationContainer, 
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-family: "Josefin Sans", "Merriweather", Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.desc h3, 
+.locationContainer h3,
+.contact h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.desc p,
+.locationContainer p,
+.contact p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: var(--silver);
+}
+
+.contact .sub {
+    font-weight: bold;
+}
+
+.contact a {
+    color: var(--alice);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+/* End of Contents */
+
+/* Starting of Footer */
+
+footer {
+    background-color: var(--black);
+}
+  
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+  
+.socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+  
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--alice);
+    border-radius: 50%;
+    margin: 10px;
+}
+  
+.socialIcons a i {
+    font-size: 2em;
+    color: var(--black);
+    opacity: 0.9;
+}
+  
+.socialIcons a:hover {
+    background-color: var(--transparent);
+    transition: 0.5s;
+}
+  
+.socialIcons a:hover i {
+    color: var(--alice);
+    transition: 0.5s;
+}
+  
+  
+.footerCredits {
+    margin: 20px;
+    text-align: center;
+}
+  
+.footerCredits p {
+    color: var(--alice);
+}
+  
+.footerCredits a {
+    text-decoration: none;
+    color: var(--silver);
+}
+  
+.credits {
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+  
+.credits:hover {
+    cursor: pointer;
+    color: var(--alice);
+}
+
+/* End of Footer */
