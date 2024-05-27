@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RhythmusByte">
+    <title>Auditorium</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <script
+     src="https://kit.fontawesome.com/fcf5d0bef4.js"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Beginning of Navbar -->
+    <header>
+        <a href="/">
+            <img src="logo.png" alt="Logo">
+        </a>
+    </header>
+    <!-- End of Navbar -->
+
+    <main>
+        <h1 class="title" id="auditoriumName">Auditorium</h1>
+        
+        <!-- Beginning of Slider -->
+        <div class="slideshow-container" id="slideshow-container">
+            <div class="mySlides fade">
+                <img id="image1" src="">
+            </div>
+            <div class="mySlides fade">
+                <img id="image2" src="">
+            </div>
+            <div class="mySlides fade">
+                <img id="image3" src="">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div><br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!-- End of Slider -->
+
+        <!-- Beginning of Contents -->
+        <div class="contentContainer">
+            <div class="desc">
+                <h3>Description</h3>
+                <p id="description"></p>
+            </div>
+            <div class="locationContainer">
+                <h3>Location</h3>
+                <p id="location"></p>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>
+                    <span class="sub">Email: </span><a href="#" id="emailLink"></a>
+                    <br>
+                    <span class="sub">Mobile: </span><span id="mobile"></span>
+                </p>
+            </div>
+        </div>
+        <!-- End of Contents -->
+
+        <!-- Starting of Footer -->
+
+        <footer>
+            <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="#"><i id="icon" class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-instagram"></a></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i id="icon" class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footerCredits">
+                <p>
+                Created by <a href="#" class="credits">Afna Sheri A</a>, <a href="#" class="credits">Akhil Mahesh</a> & <a href="#" class="credits">Sanooj K</a>
+                </p>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
