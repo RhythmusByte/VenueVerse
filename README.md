@@ -1,6 +1,6 @@
 # 🏟️ Venue Verse
 
-> **🚧 Note:** This project is currently under development.
+> **🚧 Note:** This project is not completely developed. The development will resume soon after some works.
 
 VenueVerse is a simple and basic auditorium booking website created using Node.js, MongoDB, HTML, CSS, and JavaScript. It allows users to browse available auditoriums, book them, and view details about each auditorium.
 
